@@ -1,0 +1,45 @@
+# Check whether the current python is one in a venv under the current directory
+python_is_in_venv() {
+  if command -v python >/dev/null; then
+    d="$(command -v python)"
+    while [ "$d" != "$(pwd)" ]; do
+      nd=$(dirname "$d")
+      if [ "$d" = "$nd" ]; then
+        break
+      fi
+      d="$nd"
+    done
+    test "$d" = "$(pwd)"
+  else
+    false
+  fi
+}
+
+find_activate() {
+  if command -v conda >/dev/null; then
+    conda_base=$(conda info --base)
+    if [ -f "${conda_base}/bin/activate" ]; then
+      echo "${conda_base}/bin/activate"
+    elif [ -f "${conda_base}/Scripts/activate" ]; then
+      echo "${conda_base}/Scripts/activate"
+    fi
+  else
+    command -v activate
+  fi
+}
+
+if ! python_is_in_venv; then
+  activate=$(find_activate)
+
+  if [ "$activate" != "" ]; then
+    . "$activate" ./venv
+
+    if ! python_is_in_venv; then
+      echo "Conda environment was not correctly activated."
+      false
+    fi
+  else
+    echo "Cannot find conda installation"
+    false
+  fi
+fi

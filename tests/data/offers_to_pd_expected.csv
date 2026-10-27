@@ -1,0 +1,4 @@
+id;intitule;description;dateCreation;dateActualisation;lieuTravail;lieuTravailLibelle;lieuTravailCodePostal;lieuTravailCommune;romeCode;romeLibelle;entreprise;nomEntreprise;descriptionEntreprise;adapteeTravailleurHandicape;typeContrat;natureContrat;experienceExige;experienceLibelle;salaire;dureeTravailLibelle;dureeTravailLibelleConverti;alternance;qualificationCode;qualificationLibelle;secteurActivite;secteurActiviteLibelle;competences
+1;Data Scientist;Analyse de données.;"";"";"{'libelle': 'Paris'}";Paris;"";"";"";"";"{'nom': 'TechCorp'}";TechCorp;"";"";"";"";"";"";55k€;"";"";"";"";"";"";"";""
+2;Développeur Backend;Développement d’API REST.;"";"";"{'libelle': 'Lyon'}";Lyon;"";"";"";"";"{'nom': 'WebSolutions'}";WebSolutions;"";"";"";"";"";"";45k€;"";"";"";"";"";"";"";""
+3;Data Product Owner;"";"";"";"{'libelle': ''}";"";"";"";"";"";"{'nom': 'InnovX'}";InnovX;"";"";"";"";"";"";"";"";"";"";"";"";"";""

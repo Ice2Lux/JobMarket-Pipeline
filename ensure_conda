@@ -1,0 +1,12 @@
+if ! command -v conda > /dev/null; then
+  if ! command -v activate > /dev/null; then
+    echo "Neither 'conda' nor 'activate' was found in PATH."
+    false
+  else
+    . activate
+    if ! command -v conda > /dev/null; then
+      echo "Conda environment was not correctly activated."
+      false
+    fi
+  fi
+fi

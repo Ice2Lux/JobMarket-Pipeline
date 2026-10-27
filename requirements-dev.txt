@@ -1,0 +1,23 @@
+-r requirements.txt
+
+azfr_release_utils
+
+pyspark
+
+pytest
+pytest-asyncio
+pytest-html
+pytest-forked
+pytest-cov
+pytest-xdist
+pytest-html
+
+flake8
+flake8-codeclimate
+flake8-html
+safety
+
+sphinx
+m2r2
+sphinx_rtd_theme
+zipp

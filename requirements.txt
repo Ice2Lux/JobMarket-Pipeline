@@ -1,0 +1,9 @@
+azfr-prefect-utils
+azfr-spark-utils
+azfr_fsspec_abfs
+azfr-fsspec-utils
+
+pyyaml
+uuid7
+
+pandas
