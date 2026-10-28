@@ -1,0 +1,54 @@
+{
+  "resultats": [
+    {
+      "id": "198XKPL",
+      "intitule": "Data Engineer H/F",
+      "description": "Vous concevez et maintenez les pipelines de données de la plateforme.",
+      "dateCreation": "2026-10-20T09:12:44.000Z",
+      "dateActualisation": "2026-10-25T14:03:10.000Z",
+      "lieuTravail": {"libelle": "75 - Paris 9e Arrondissement", "latitude": 48.877, "longitude": 2.3375, "codePostal": "75009", "commune": "75109"},
+      "romeCode": "M1811",
+      "romeLibelle": "Data engineer",
+      "entreprise": {"nom": "DATAFLOW SAS", "entrepriseAdaptee": false},
+      "typeContrat": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "3 An(s)",
+      "competences": [
+        {"code": "100001", "libelle": "Concevoir des pipelines de données", "exigence": "S"},
+        {"code": "100002", "libelle": "Python", "exigence": "E"}
+      ],
+      "salaire": {"libelle": "Annuel de 45000.0 Euros à 55000.0 Euros sur 12.0 mois"},
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "qualificationLibelle": "Cadre",
+      "secteurActiviteLibelle": "Programmation informatique"
+    },
+    {
+      "id": "198XKQM",
+      "intitule": "Data Analyst",
+      "description": "Analyse des ventes et tableaux de bord Power BI.",
+      "dateCreation": "2026-10-22T08:00:00.000Z",
+      "dateActualisation": "2026-10-22T08:00:00.000Z",
+      "lieuTravail": {"libelle": "13 - Marseille 2e Arrondissement", "codePostal": "13002", "commune": "13202"},
+      "entreprise": {"nom": "SOLEIL RETAIL"},
+      "typeContrat": "CDD",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "competences": [{"libelle": "Python"}, {"libelle": "SQL"}],
+      "salaire": {"libelle": "Mensuel de 2600.0 Euros sur 12.0 mois"},
+      "alternance": false
+    },
+    {
+      "id": "198XKRN",
+      "intitule": "Alternance - Assistant BI",
+      "dateCreation": "2026-10-23T10:30:00.000Z",
+      "dateActualisation": "2026-10-23T10:30:00.000Z",
+      "lieuTravail": {"libelle": "Ile-de-France"},
+      "typeContrat": "CDD",
+      "experienceExige": "D",
+      "salaire": {"libelle": "Horaire de 12.0 Euros sur 12 mois"},
+      "alternance": true
+    }
+  ]
+}

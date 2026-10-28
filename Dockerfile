@@ -1,16 +1,19 @@
-FROM prodazfrz6sh.azurecr.io/pod-base:prefect-spark-3.5-py311
+FROM python:3.11-slim
 
-RUN mkdir -p /work/workflow
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    FT_DATA_DIR=/data
 
-COPY pip.conf /etc/pip.conf
-COPY requirements.txt constraints.txt setup.py /work/
+WORKDIR /app
 
-RUN pip install --no-cache-dir -e . -r requirements.txt -c constraints.txt
+COPY pyproject.toml README.md ./
+COPY src ./src
+RUN pip install .
 
-COPY workflow /work/workflow/
+RUN useradd --create-home pipeline && mkdir /data && chown pipeline /data
+USER pipeline
+VOLUME ["/data"]
 
-ARG _GITHUB_REPOSITORY
-ARG _GITHUB_SHA
-
-ENV GITHUB_REPOSITORY=${_GITHUB_REPOSITORY}
-ENV GITHUB_SHA=${_GITHUB_SHA}
+ENTRYPOINT ["python", "-m", "jobmarket"]
+CMD ["run"]
